@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="صيدلية الباز للمستلزمات الطبيةو دلوقتى ممكن تقدر تطلب الدواء و انت فى البيت">
+    <meta name="keywords" content="الأدوية , العلاج , فيتامينات ">
+    <meta name="author" content="الباز جروب">
+
+    <title> تفاصيل المنتج </title>
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+
+    <!--== Start Preloader Content ==-->
+    <div class="preloader-wrap">
+        <div class="preloader">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!--== End Preloader Content ==-->
+
+    <!-- Scroll Top Button -->
+    <button class="scroll-top tran3s">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- whatsApp icon -->
+    <button type="button" class="btn btn-success whatsapp-button" data-bs-toggle="tooltip" data-bs-placement="left"
+        title="تواصل معنا عن طريق الواتساب">
+        <a href="https://wa.me/01066360219" target="_blank" class="text-white">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </button>
+
+    <!-- Navbar  -->
+    <div class="bg-dark">
+        <nav class="navbar  navbar-expand-lg navbar-dark  p-2 container">
+            <a href="index.html" class="navbar-brand p-0">
+                <!-- <h1 class="text-primary m-0"></h1> -->
+                <img src="assets/images/logo/Elb-logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0 pe-4">
+                    <a href="index.html" class="nav-item nav-link">الرئيسية</a>
+                    <a href="#" class="nav-item nav-link">الدواء</a>
+                    <a href="#" class="nav-item nav-link">العناية بالشعر</a>
+                    <a href="#" class="nav-item nav-link">العناية بالبشرة</a>
+                    <a href="#" class="nav-item nav-link">المكملات الغذائية</a>
+
+                    <a href="contact.html" class="nav-item nav-link">الصحة الجنسية</a>
+                </div>
+                <a href="login.html" class="btn btn-success py-2 px-4">تسجيل الدخول</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Sticky Search -->
+    <div class="sticky-top bg-light p-1">
+        <div class="container">
+            <div class="search-bar-container mb-2 mt-2 mx-auto">
+                <div class="d-flex justify-content-around">
+                    <input type="text" class="form-control search-input" placeholder="البحث عن الأدوية">
+                    <div class="market-basket">
+                        <a href="shoppingCart.html"><i class="fa-solid fa-basket-shopping fa-xl"></i></a>
+                        <span class="badge badge-pill badge-danger">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- NavBar Start End-->
+
+
+
+
+
+    <div class="container my-5">
+            <div class="row holding">
+                <div class="col-md-6 mb-5">
+                    <img src="assets/images/Products/13.png" alt="Product" class="product-img card-img-top" data-bs-toggle="modal"
+                        data-bs-target="#productModal">
+                    <div class="thumbnail-container">
+                        <img src="assets/images/Products/13.png" alt="Thumbnail" class="thumbnail" data-bs-toggle="modal"
+                            data-bs-target="#productModal">
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex flex-column product-details">
+                    <div>
+                        <h1 class="product-title card-title mb-4">اسم المنتج</h1>
+                        <p class="product-description card-text mb-4">
+                            هذا هو وصف المنتج. يتم استخدام هذا النص لتقديم وصف موجز للمنتج. يمكن أن يتضمن الوصف الميزات
+                            والفوائد وأي تفاصيل أخرى قد يرغب العملاء في معرفتها.
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <span class="product-price ">السعر :</span>
+                        <span class="card-price">34 جنيه</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">الكمية</label>
+                        <div class="quantity-selector">
+                            <button class="btn" onclick="decrementQuantity()">-</button>
+                            <input type="text" id="quantity" value="1" min="1">
+                            <button class="btn" onclick="incrementQuantity()">+</button>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-success Add-tocart btn-lg" type="button" data-product-id="100">إضافة إلى السلة</button>
+                    </div>
+                    <div class="alert text-center alert-light mt-5" role="alert">
+                        <i class="fa-solid fa-truck"></i>
+                        التوصيل فى خلال ساعة أو ساعتين
+                    </div>
+                </div>
+            </div> 
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="assets/images/Products/13.png" alt="Product" class="img-fluid" id="modalImage">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- =============================================================================================================================== -->
+    <div class="container mb-3">
+        <h4 class="header-extra mb-4 position-relative">تفاصيل أكتر</h4>
+        <br class="breakLine">
+        <p> هذا هو وصف المنتج. يتم استخدام هذا النص لتقديم وصف موجز للمنتج. يمكن أن يتضمن الوصف الميزات والفوائد وأي
+            تفاصيل أخرى قد يرغب العملاء في معرفتها.
+
+        </p>
+    </div>
+
+    <!-- swiper -->
+    <div class="container mt-3">
+        <h4 class="header-extra mb-3 position-relative"> أدوية أخرى </h4>
+        <br class="breakLine">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Product cards -->
+                <div class="swiper-slide">
+                    <div class="card holding">
+                        <a href="productdetails.html"><img src="assets/images/Products/30.png" class="card-img-top"
+                                alt="products"></a>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">دواء كذا</h5>
+                            <p class="card-text">دا وصف الدواء</p>
+                            <p class="card-price text-center"><b>EGP 160</b></p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-success Add-tocart rounded text-nowrap w-100" type="button"
+                                    data-product-id="7">إضافة إلى
+                                    السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Repeat for other slides -->
+                <!-- Product cards -->
+                <div class="swiper-slide">
+                    <div class="card holding">
+                        <a href="productdetails.html"><img src="assets/images/Products/31.png" class="card-img-top"
+                                alt="products"></a>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">دواء كذا</h5>
+                            <p class="card-text">دا وصف الدواء</p>
+                            <p class="card-price text-center"><b>EGP 160</b></p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-success Add-tocart rounded text-nowrap w-100" type="button"
+                                    data-product-id="8">إضافة إلى
+                                    السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product cards -->
+                <div class="swiper-slide">
+                    <div class="card holding">
+                        <a href="productdetails.html"><img src="assets/images/Products/32.png" class="card-img-top"
+                                alt="products"></a>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">دواء كذا</h5>
+                            <p class="card-text">دا وصف الدواء</p>
+                            <p class="card-price text-center"><b>EGP 160</b></p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-success Add-tocart rounded text-nowrap w-100" type="button"
+                                    data-product-id="9">إضافة إلى
+                                    السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product cards -->
+                <div class="swiper-slide">
+                    <div class="card holding">
+                        <a href="productdetails.html"><img src="assets/images/Products/33.png" class="card-img-top"
+                                alt="products"></a>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">دواء كذا</h5>
+                            <p class="card-text">دا وصف الدواء</p>
+                            <p class="card-price text-center"><b>EGP 160</b></p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-success Add-tocart rounded text-nowrap w-100" type="button"
+                                    data-product-id="10">إضافة إلى
+                                    السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product cards -->
+                <div class="swiper-slide">
+                    <div class="card holding">
+                        <a href="productdetails.html"><img src="assets/images/Products/34.png" class="card-img-top"
+                                alt="products"></a>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">دواء كذا</h5>
+                            <p class="card-text">دا وصف الدواء</p>
+                            <p class="card-price text-center"><b>EGP 160</b></p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-success Add-tocart rounded text-nowrap w-100" type="button"
+                                    data-product-id="11">إضافة إلى
+                                    السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product cards -->
+                <div class="swiper-slide">
+                    <div class="card holding">
+                        <a href="productdetails.html"><img src="assets/images/Products/29.png" class="card-img-top"
+                                alt="products"></a>
+                        <div class="card-body">
+                            <h5 class="card-title text-center">دواء كذا</h5>
+                            <p class="card-text">دا وصف الدواء</p>
+                            <p class="card-price text-center"><b>EGP 160</b></p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-success Add-tocart rounded text-nowrap w-100" type="button"
+                                    data-product-id="12">إضافة إلى
+                                    السلة</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Footer-->
+    <footer class="footer bg-dark mt-5">
+
+        <!-- Widgets  -->
+        <div class=" py-3 py-md-3 py-xl-4 border-top border-light-subtle">
+            <div class="container overflow-hidden">
+                <div class="row gy-3 gy-md-5 gy-xl-0 align-items-sm-center">
+                    <div class="col-xs-12 col-sm-6 col-xl-3 order-0 order-xl-0">
+                        <div class="footer-logo-wrapper text-center text-sm-start">
+                            <a href="#!">
+                                <img src="assets/images/logo/Elb-logo.png" alt="BootstrapBrain Logo" width="175"
+                                    height="57">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-xl-6 order-2 order-xl-1">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link link-light px-2 px-md-3" href="#!">حول</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-light px-2 px-md-3" href="contactus.html">الاتصال</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-light px-2 px-md-3" href="#!">سياسة الاستخدام</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link link-light px-2 px-md-3" href="#!">الشروط</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-xl-3 order-1 order-xl-2">
+                        <div class="social-media-wrapper">
+                            <ul class="list-unstyled m-0 p-0 d-flex justify-content-center justify-content-sm-end">
+                                <li class="me-3">
+                                    <a href="#!" class="link-light link-opacity-75-hover">
+                                        <i class="fa-brands fa-facebook fa-2xl"></i>
+                                    </a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="#!" class="link-light link-opacity-75-hover">
+                                        <i class="fa-brands fa-instagram fa-2xl"></i>
+                                    </a>
+                                </li>
+                                <li class="me-3">
+                                    <a href="#!" class="link-light link-opacity-75-hover">
+                                        <i class="fa-brands fa-x-twitter fa-2xl"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="bg-dark  py-md-2 ">
+            <div class="container overflow-hidden">
+                <div class="row">
+                    <div class="col">
+                        <div class="footer-copyright-wrapper text-center text-light">
+                            &copy; 2024. All Rights Reserved.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- End of .Footer -->
+    <!-- =============================================================================================================================== -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
+        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: false,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 20
+                }
+            }
+        });
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
